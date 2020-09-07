@@ -7,8 +7,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 300;
-  border-radius: 0px 0px 10px 10px;
 }
 
 nav > span {
@@ -16,4 +14,9 @@ nav > span {
   font-size: 50px;
   font-weight: 600;
   margin: 1.5em;
+}
+
+#newTweet {
+  margin: 1.5em;
+  font: inherit;
 }
