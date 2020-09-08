@@ -15,6 +15,7 @@ article:hover{
   box-shadow: 5px 5px gray;
 }
 .horizontalDisplay {
+  margin-top: 0;
   height: 100px;
   display: flex;
   justify-content: space-between;
