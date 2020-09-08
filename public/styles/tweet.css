@@ -1,0 +1,46 @@
+.tweet {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid darkslategray;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-image: none;
+  background-color: transparent;
+}
+article:hover{
+  box-shadow: 5px 5px gray;
+}
+.horizontalDisplay {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border: none;
+}
+.content {
+  color: darkgray;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 200px;
+  overflow-y: scroll;
+  border-bottom: 5px solid darkslategray;
+}
+.avatar {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.handler {
+  color: darkgray;
+  font-weight: 600;
+  margin: 10px;
+}
+.icon {
+  color: blue;
+  font-size: large;
+  margin-right: 10px;
+}

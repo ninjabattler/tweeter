@@ -1,18 +1,17 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 70%;
   background-color: #e6e2dd;
   color: #545149;
   font-family: 'Bungee', sans-serif;
   margin: 5px;
-  height: 150px;
+  height: 250px
 }
 
 form {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   height: 100%;
   align-items: space-around;
 }
@@ -21,14 +20,17 @@ textarea {
   background-color: transparent;
   border-color: transparent;
   border-width: 0;
-  height: 30px;
-  width: 54%;
+  width: 100%;
   border-bottom: 3px solid #545149;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
   border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
   margin-right: -20px;
   color: #545149;
+}
+textarea:focus {
+  outline: none;
 }
 
 button[type=submit] {
@@ -36,24 +38,26 @@ button[type=submit] {
   color: white;
   font-family: 'Bungee', sans-serif;
   border: 3px solid #4056A1;
-  margin: 5px;
+  margin: 18px;
 }
 
 .counter {
   float: right;
-  margin: 5px;
+  margin: 18px;
   font-family: 'Bungee', sans-serif;
+  width: 80px
+}
+
+.overLimit {
+  color: red;
 }
 
 form label {
   width: auto;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600;
-  border-left: 20px solid transparent;
-
+  margin-left: 1em;
   height: 30px;
-  margin-left: -25px;
-  border-bottom: 3px solid #545149;
 }
 
 .submitBox {
