@@ -53,7 +53,7 @@ const renderTweets = function(tweets) {
 const loadTweets = function() {
   $.ajax('/tweets', { method: 'GET' })
     .then(function (tweets) {
-      renderTweets(tweets);
+      renderTweets(tweets.reverse());
     });
 }
 $(() =>{
@@ -72,9 +72,11 @@ $(() =>{
     } else {
       if(this.children[1].value.length > 140){
         console.error('Ahoy Spongeboi me bob, yer string is to long argargargargargargar')
+        alert('Ahoy Spongeboi me bob, yer string is to long argargargargargargar');
       }
       if(this.children[1].value.length <= 0){
         console.error('Ahoy Spongeboi me bob, yer string is empty argargargargargargar')
+        alert('Ahoy Spongeboi me bob, yer string is empty argargargargargargar');
       }
     }
     
