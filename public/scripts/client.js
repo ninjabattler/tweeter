@@ -66,12 +66,37 @@ const createTweetElement = function(tweet) {
 }
 
 const renderTweets = function(tweets) {
+  $('#tweets-container').empty();
   for(const tweet of tweets){
     const post = createTweetElement(tweet);
     $('#tweets-container').append(post);
   }
 }
+
+
   
 $(() =>{
   renderTweets(data);
+
+  $('#tweetForm').on('submit', function (event) {
+    event.preventDefault();
+    console.log('Button clicked, performing ajax call...');
+    $.ajax($(this), { method: 'POST', data: $(this).serialize()})
+      .then(function () {
+        console.log('Success: ', $(this).serialize());
+        data.unshift({
+          "user": {
+            "name": "Newton",
+            "avatars": "https://i.imgur.com/73hZDYK.png"
+            ,
+            "handle": "@SirIsaac"
+          },
+          "content": {
+            "text": this.serialize()
+          },
+          "created_at": new Date().getTime()
+        });
+        renderTweets(data);
+      });
+  });
 })

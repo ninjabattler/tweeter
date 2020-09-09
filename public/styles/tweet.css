@@ -27,6 +27,7 @@ article:hover{
   margin-left: 10px;
   margin-right: 10px;
   height: 200px;
+  width: 90%;
   overflow-y: scroll;
   border-bottom: 5px solid darkslategray;
 }

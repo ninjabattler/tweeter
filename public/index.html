@@ -42,10 +42,10 @@
       </div>
     </header>
     <!-- Page-specific (main) content here -->
-    <main class="container" id="tweets-container">
+    <main class="container">
       <section class="new-tweet">
         <br>
-        <form method="POST" action="/tweets/">
+        <form method="POST" action="/" id='tweetForm'>
           <label for="tweet-text">What are you humming about?</label>
           <textarea placeholder="Tweet" name="text" id="tweet-text"></textarea>
           <div class="submitBox">
@@ -54,6 +54,9 @@
           </div>
         </form>
       </section>
+      <main  id="tweets-container">
+
+      </main>
     </main>
   </body>
 </html>
