@@ -53,7 +53,6 @@ const renderTweets = function(tweets) {
 const loadTweets = function() {
   $.ajax('/tweets', { method: 'GET' })
     .then(function (tweets) {
-      console.log('Success: ', tweets);
       renderTweets(tweets);
     });
 }
@@ -62,10 +61,22 @@ $(() =>{
   $('#tweetForm').on('submit', function (event) {
     event.preventDefault();
     console.log('Button clicked, performing ajax call...');
-    $.ajax('/tweets', { method: 'POST', data: $(this).serialize()})
+    const textArea = this.children[1];
+    if(this.children[1].value.length > 0 && this.children[1].value.length <= 140){
+      $.ajax('/tweets', { method: 'POST', data: $(this).serialize()})
       .then(function () {
         console.log('Success: ', $(this).serialize());
+        textArea.value = '';  
         loadTweets();
       });
+    } else {
+      if(this.children[1].value.length > 140){
+        console.error('Ahoy Spongeboi me bob, yer string is to long argargargargargargar')
+      }
+      if(this.children[1].value.length <= 0){
+        console.error('Ahoy Spongeboi me bob, yer string is empty argargargargargargar')
+      }
+    }
+    
   });
 })
