@@ -25,7 +25,7 @@ const getDate = function(time){
 const createTweetElement = function(tweet) {
   let $tweet = $(`<article class="tweet"></article>`);
   let $header = $(`<header class='tweet horizontalDisplay'></header>`);
-  let $content = $(`<p class='content'>${tweet.content.text}</p>`);
+  let $content = $(`<p class='content'>`).text(tweet.content.text);
   let $footer = $(`<footer class='tweet horizontalDisplay'></footer>`);
   let $avatar = $(`<div class='avatar'><img src='${tweet.user.avatars}'><span>${tweet.user.name}</span></div>`);
 
