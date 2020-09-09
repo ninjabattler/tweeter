@@ -66,17 +66,20 @@ $(() =>{
       $.ajax('/tweets', { method: 'POST', data: $(this).serialize()})
       .then(function () {
         console.log('Success: ', $(this).serialize());
+        $('#errorDisplay').attr("id","errorHide")
         textArea.value = '';  
         loadTweets();
       });
     } else {
       if(this.children[1].value.length > 140){
+        $('#noError').attr("id","errorDisplay")
+        $('#errorDisplay').html('Ahoy Spongeboi me bob, yer string is to long argargargargargargar')
         console.error('Ahoy Spongeboi me bob, yer string is to long argargargargargargar')
-        alert('Ahoy Spongeboi me bob, yer string is to long argargargargargargar');
       }
       if(this.children[1].value.length <= 0){
-        console.error('Ahoy Spongeboi me bob, yer string is empty argargargargargargar')
-        alert('Ahoy Spongeboi me bob, yer string is empty argargargargargargar');
+        $('#noError').attr("id","errorDisplay")
+        $('#errorDisplay').html('Ahoy Spongeboi me bob, yer string is empty argargargargargargar')
+        console.error('Ahoy Spongeboi me bob, yer string is empty argargargargargargar');
       }
     }
     

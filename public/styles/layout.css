@@ -37,3 +37,43 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ #errorDisplay {
+   background-color: #ff0000;
+   height: 50px;
+   width: 60%;
+   color: #f4f1ec;
+   border-radius: 10px;
+   text-align: center;
+   font-family: 'Source Sans Pro', sans-serif;
+   font-weight: 600;
+   margin-top: 10px;
+   animation-name: fade;
+   animation-duration: 2s;
+ }
+ #errorHide {
+  background-color: #f4f1ec;
+  height: 50px;
+  width: 60%;
+  color: #f4f1ec;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  animation-name: fadeBack;
+  animation-duration: 2s;
+}
+ #noError{
+  background-color: #f4f1ec;
+  height: 50px;
+  color: #f4f1ec;
+  margin-top: 10px;
+ }
+ @keyframes fade{
+   0%{background-color: #f4f1ec;}
+   100%{background-color: #ff0000;}
+ }
+ @keyframes fadeBack{
+   0%{background-color: #ff0000;}
+   100%{background-color: #f4f1ec;}
+ }
