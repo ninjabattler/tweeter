@@ -8,4 +8,18 @@ header {
   flex-direction: column;
   background-color: #bf7300;
   background-image: url('../images/cubes.png');
+  border: none;
+}
+
+@media only screen and (min-width: 1024px){
+  header{
+    width: 35%;
+    height: 400px;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-right: 7px solid gray;
+    border-bottom: 7px solid gray;
+    border-left: 7px solid transparent;
+    border-top: 7px solid transparent;  
+  }
 }

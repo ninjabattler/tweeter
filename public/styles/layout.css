@@ -14,8 +14,7 @@ html {
  * Global layout stuff
  */
 
-body {
-  margin-top: 120px;
+#content {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -26,7 +25,7 @@ body {
 }
 
 main {
-  width: 80%;
+  width: 95%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -37,16 +36,17 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
 #scrollButton{
   background-color: red;
-  width: 120px;
-  height: 120px;
+  width: 10vw;
+  height: 10vw;
   border-radius: 100%;
   border: none;
   position: fixed;
-  margin-left: 45%;
-  margin-top: 34%;
-  font-size: 60px;
+  margin-left: 40vw;
+  margin-top: 75vh;
+  font-size: 8vw;
   color: white;
   text-shadow: 2px 2px lightslategrey;
   box-shadow: 4px 4px gray;
@@ -97,3 +97,17 @@ main {
    0%{background-color: #ff0000;}
    100%{background-color: #f4f1ec;}
  }
+ @media only screen and (min-width: 1024px){
+  #content {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 120px;
+  }
+  #scrollButton {
+    margin-left: 5vw;
+    margin-top: 55vh;
+  }
+  main {
+    width: 80%;
+  }
+}
