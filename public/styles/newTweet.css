@@ -63,8 +63,14 @@ form label {
   font-weight: 600;
   margin-left: 1em;
   height: 30px;
+  margin-bottom: 50px;
 }
 
 .submitBox {
   width: 100%;
+}
+@media only screen and (min-width: 1024px){
+  form label {
+    margin-bottom: 0;
+  }
 }

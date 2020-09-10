@@ -15,6 +15,9 @@
 article:hover{
   box-shadow: 5px 5px gray;
 }
+article:hover .icon {
+  opacity: 1;
+}
 .horizontalDisplay {
   margin-top: 0;
   height: 100px;
@@ -43,7 +46,11 @@ article:hover{
   margin: 10px;
 }
 .icon {
-  color: blue;
+  color: gray;
   font-size: large;
   margin-right: 10px;
+  opacity: 0;
+}
+.icon:hover {
+  color: blue;
 }

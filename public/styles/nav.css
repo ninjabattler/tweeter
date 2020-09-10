@@ -12,9 +12,10 @@ nav {
 
 nav > span {
   font-family: 'Bungee', sans-serif;
-  font-size: 50px;
+  font-size: 10vw;
   font-weight: 600;
   margin: 1.5em;
+  margin-left: 3%;
   text-shadow: 2px 2px black;
 }
 
@@ -34,5 +35,9 @@ nav > span {
   nav {
     margin-top: -120px;
     background-color: #4056A1;
+  }
+  nav > span {
+    font-size: 50px;
+    margin-left: 1.5em;
   }
 }
