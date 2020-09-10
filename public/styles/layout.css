@@ -37,6 +37,26 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+#scrollButton{
+  background-color: red;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: none;
+  position: fixed;
+  margin-left: 45%;
+  margin-top: 34%;
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 2px lightslategrey;
+  box-shadow: 4px 4px gray;
+  opacity: 0;
+}
+
+#scrollButton:focus {
+  outline: none;
+}
+
  #errorDisplay {
    background-color: #ff0000;
    height: 50px;

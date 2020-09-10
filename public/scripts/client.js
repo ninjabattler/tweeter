@@ -84,6 +84,7 @@ $(() =>{
       }
     }
   });
+  
   $('#newTweet').on('click', function(event){
     if($('#tew').attr('shrunk') === 'false'){
       $("#tew").animate({ height: "0px", opacity: 0 });
@@ -93,4 +94,26 @@ $(() =>{
       $('#tew').attr('shrunk', 'false');
     }
   })
+
+  $('#scrollButton').on('click', function(event){
+    $("html").animate({ scrollTop: "0px"});
+    clearInterval(scrollCheck);
+    let scrollCheckk = setInterval(() => {
+      if($('html').scrollTop() > 100){
+        $('#scrollButton').animate({opacity: 1});
+      }
+    }, 500);
+    $("#tew").animate({ height: "250px", opacity: 1 });
+    $('#tew').attr('shrunk', 'false');
+    $(this).animate({opacity: 0});
+  })
+
+  let scrollCheck = setInterval(() => {
+    if($('html').scrollTop() > 100){
+      $('#scrollButton').animate({opacity: 1});
+    } else {
+      $('#scrollButton').animate({opacity: 0});
+    }
+  }, 500);
+
 })
