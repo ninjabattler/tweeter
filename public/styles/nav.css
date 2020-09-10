@@ -16,9 +16,17 @@ nav > span {
   font-size: 50px;
   font-weight: 600;
   margin: 1.5em;
+  text-shadow: 2px 2px black;
 }
 
 #newTweet {
   margin: 1.5em;
   font: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+#navArrow {
+  color: red;
+  text-shadow: 1px 1px orange;
 }

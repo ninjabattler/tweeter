@@ -39,6 +39,11 @@ button[type=submit] {
   font-family: 'Bungee', sans-serif;
   border: 3px solid #4056A1;
   margin: 18px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  box-shadow: 3px 3px lightslategrey;
 }
 
 .counter {

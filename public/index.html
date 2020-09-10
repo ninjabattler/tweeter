@@ -29,7 +29,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <span id="newTweet"><strong>Write</strong> a new Tweet</span>
+      <span id="newTweet"><strong>Write</strong> a new Tweet<br><i id="navArrow" class="fas fa-angle-double-down"></i></span>
     </nav>
     <!-- Header -->
     <header>
@@ -44,7 +44,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <div id='noError'></div>
-      <section class="new-tweet">
+      <section class="new-tweet" id="tew" shrunk="false">
         <br>
         <form method="POST" action="/" id='tweetForm'>
           <label for="tweet-text">What are you humming about?</label>

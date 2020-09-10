@@ -58,6 +58,7 @@ const loadTweets = function() {
 }
 $(() =>{
   loadTweets();
+
   $('#tweetForm').on('submit', function (event) {
     event.preventDefault();
     console.log('Button clicked, performing ajax call...');
@@ -82,6 +83,14 @@ $(() =>{
         console.error('Ahoy Spongeboi me bob, yer string is empty argargargargargargar');
       }
     }
-    
   });
+  $('#newTweet').on('click', function(event){
+    if($('#tew').attr('shrunk') === 'false'){
+      $("#tew").animate({ height: "0px", opacity: 0 });
+      $('#tew').attr('shrunk','true');
+    } else {
+      $("#tew").animate({ height: "250px", opacity: 1 });
+      $('#tew').attr('shrunk', 'false');
+    }
+  })
 })
